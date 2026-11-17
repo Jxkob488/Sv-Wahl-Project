@@ -1,92 +1,92 @@
-# Project Proposal - Template
+# Projektvorschlag – Vorlage
 
-Insert your project proposal in the top level `README.md` of your repository and test it with the [**Novedu Writing Activity**](https://app.novedu.at/848j7fzkbk).
+Füge deinen Projektvorschlag in die oberste `README.md` deines Repositorys ein und teste ihn mit der [**Novedu-Schreibaufgabe**](https://app.novedu.at/848j7fzkbk).
 
-## Project Title
+## Projekttitel
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - The result in one line, not the technology.
+> - Das Ergebnis in einer Zeile, nicht die Technologie.
 
-## 1. Initial Situation
+## 1. Ausgangssituation
 
-### 1.1. Current Situation
+### 1.1. Aktuelle Situation
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - First clarify the project environment: is it about the beekeeping club or the school cafeteria of HTL Leonding?
-> - Describe the current situation: which activities or processes are involved?
-> - **No solution, no technology!** Test: would someone who doesn't know your project recognise the problem?
+> - Kläre zuerst das Projektumfeld: Geht es um den Imkerverein oder die Schulcafeteria der HTL Leonding?
+> - Beschreibe die aktuelle Situation: Welche Tätigkeiten oder Abläufe sind damit verbunden?
+> - **Keine Lösung, keine Technologie!** Prüfe: Erkennt jemand, der dein Projekt nicht kennt, das Problem?
 
-### 1.2. Potential for Improvement
+### 1.2. Verbesserungspotenzial
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - Describe the problems and the potential for improvement in the current situation.
-> - It should become clear that action is urgently needed!
-> - State what the problems cost (time, money, errors, frustration), with numbers where possible.
+> - Beschreibe die Probleme und das Verbesserungspotenzial der aktuellen Situation.
+> - Es sollte klar werden, dass dringend gehandelt werden muss!
+> - Gib an, welche Kosten die Probleme verursachen (Zeit, Geld, Fehler, Frustration) – wenn möglich mit Zahlen.
 
-### 1.3. Stakeholders
+### 1.3. Beteiligte
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - Who is affected by the project, can influence it, or believes they are affected?
-> - Mark each stakeholder as **internal** or **external** and state their **interest**.
-> - Don't forget who has to operate or accept the system.
+> - Wer ist vom Projekt betroffen, kann es beeinflussen oder glaubt, davon betroffen zu sein?
+> - Kennzeichne jede beteiligte Person bzw. Gruppe als **intern** oder **extern** und gib ihr **Interesse** an.
+> - Vergiss nicht, wer das System bedienen oder akzeptieren muss.
 
-| Stakeholder | internal / external | Interest |
+| Beteiligte | intern / extern | Interesse |
 | --- | --- | --- |
 | | | |
 
-## 2. Objectives
+## 2. Ziele
 
-### 2.1. Goals
+### 2.1. Ziele
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - Outline your concept for a new system that can solve the problems described above.
-> - Use a **mind map** to work out the core features of your system.
-> - Write at least three **verifiable** goals: observable action, measurable condition, context.
-> - Mark each goal as an **outcome goal** or a **process goal**.
-> - Check each goal with the four questions: What for? For whom? End result? Success criteria?
-> - If two goals compete, state which one wins.
+> - Skizziere dein Konzept für ein neues System, das die oben beschriebenen Probleme lösen kann.
+> - Arbeite die Kernfunktionen deines Systems mithilfe einer **Mindmap** heraus.
+> - Formuliere mindestens drei **überprüfbare** Ziele: beobachtbare Handlung, messbare Bedingung, Kontext.
+> - Kennzeichne jedes Ziel als **Ergebnisziel** oder **Prozessziel**.
+> - Prüfe jedes Ziel anhand dieser vier Fragen: Wozu? Für wen? Endergebnis? Erfolgskriterien?
+> - Wenn zwei Ziele miteinander konkurrieren, gib an, welches Vorrang hat.
 
-| Goal | Type | For whom | How you can tell (success criterion) |
+| Ziel | Typ | Für wen | Woran es erkennbar ist (Erfolgskriterium) |
 | --- | --- | --- | --- |
-| | outcome goal / process goal | | |
+| | Ergebnisziel / Prozessziel | | |
 
-### 2.2. Non-Goals
+### 2.2. Nicht-Ziele
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - What does the project explicitly **not** do? At least three points.
-> - No "for now": a non-goal is not a hidden plan.
+> - Was macht das Projekt ausdrücklich **nicht**? Nenne mindestens drei Punkte.
+> - Kein „vorerst“: Ein Nicht-Ziel ist kein versteckter Plan.
 
-## 3. Opportunities and Risks
+## 3. Chancen und Risiken
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - What benefit does your proposed system bring to the company's strategic direction?
-> - Which concrete project risks have to be expected?
-> - Which **assumptions** have you made that are not yet clarified? State the source for each.
+> - Welchen Nutzen bringt dein vorgeschlagenes System für die strategische Ausrichtung des Unternehmens?
+> - Mit welchen konkreten Projektrisiken ist zu rechnen?
+> - Welche **Annahmen** hast du getroffen, die noch nicht geklärt sind? Gib für jede die Quelle an.
 
-## 4. Planning
+## 4. Planung
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - Clarify the staffing and financial constraints.
-> - Define rough milestones for the project: **dated, verifiable results**, not activities ("working on the frontend" is not a milestone).
-> - Each work package has **exactly one** person responsible.
-> - Estimate the effort in hours as a **range** (e.g. 20 - 30 h), not as a single number.
+> - Kläre die personellen und finanziellen Rahmenbedingungen.
+> - Lege grobe Meilensteine für das Projekt fest: **datierte, überprüfbare Ergebnisse**, keine Tätigkeiten („an der Oberfläche arbeiten“ ist kein Meilenstein).
+> - Für jedes Arbeitspaket ist **genau eine** Person verantwortlich.
+> - Schätze den Aufwand in Stunden als **Spanne** (z. B. 20–30 h), nicht als einzelne Zahl.
 
-| Milestone (verifiable result) | Date | Responsible | Effort (h) |
+| Meilenstein (überprüfbares Ergebnis) | Datum | Verantwortlich | Aufwand (h) |
 | --- | --- | --- | --- |
 | | | | |
 
-## 5. Technology
+## 5. Technologie
 
-> :bulb: **Notes:**
+> :bulb: **Hinweise:**
 >
-> - Language, framework, data storage, target platform, each with one sentence on **why**.
-> - Technology belongs only here, not in the initial situation or the objectives.
-> - "We want to learn Spring Boot" is not a justification but a personal motivation, and doesn't belong in the proposal.
+> - Programmiersprache, Framework, Datenspeicherung und Zielplattform – jeweils mit einem Satz zur **Begründung**.
+> - Technologie gehört nur hierher, nicht in die Ausgangssituation oder die Ziele.
+> - „Wir möchten Spring Boot lernen“ ist keine Begründung, sondern eine persönliche Motivation und gehört nicht in den Projektvorschlag.
