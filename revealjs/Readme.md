@@ -1,21 +1,21 @@
-# Presentations with Markdown and reveal.js
+# Präsentationen mit Markdown und reveal.js
 
-You write your slides in [Markdown](https://www.markdownguide.org/basic-syntax/), just like a `Readme.md`. [reveal.js](https://revealjs.com/) shows them in the browser as a presentation.
+Du schreibst deine Folien in [Markdown](https://www.markdownguide.org/basic-syntax/), genau wie eine `Readme.md`. [reveal.js](https://revealjs.com/) zeigt sie im Browser als Präsentation an.
 
-Why not PowerPoint?
+Warum nicht PowerPoint?
 
-- Your slides are text: you version them with git, see every change in the diff and work as a team without "final_v3_really_final.pptx".
-- Code examples get syntax highlighting automatically.
-- The result is a web page and runs in any browser, including on GitHub Pages.
+- Deine Folien sind Text: Du verwaltest sie mit Git, siehst jede Änderung im Diff und arbeitest im Team – ganz ohne „final_v3_wirklich_final.pptx“.
+- Codebeispiele werden automatisch mit Syntaxhervorhebung dargestellt.
+- Das Ergebnis ist eine Webseite und läuft in jedem Browser, auch auf GitHub Pages.
 
-The example presentation in this folder ([slides.md](./slides.md)) shows every building block from this guide.
+Die Beispielpräsentation in diesem Ordner ([slides.md](./slides.md)) zeigt alle Bausteine aus dieser Anleitung.
 
-## 1. Requirements
+## 1. Voraussetzungen
 
-- [Node.js](https://nodejs.org/) version 22 (LTS) or newer. Check with `node -v`.
-- An editor, e.g. VS Code.
+- [Node.js](https://nodejs.org/) Version 22 (LTS) oder neuer. Prüfe die Version mit `node -v`.
+- Ein Editor, z. B. VS Code.
 
-## 2. Try the example
+## 2. Beispiel ausprobieren
 
 ```bash
 cd 01-ProjectStart/revealjs
@@ -23,22 +23,22 @@ npm install
 npm start
 ```
 
-Your browser opens `http://localhost:8000`. Change something in `slides.md` and save: the page reloads by itself. Stop with `Ctrl + C`.
+Dein Browser öffnet `http://localhost:8000`. Ändere etwas in `slides.md` und speichere die Datei: Die Seite wird automatisch neu geladen. Beende den Server mit `Ctrl + C`.
 
-## 3. Create your own project
+## 3. Eigenes Projekt erstellen
 
-A project consists of only a few files:
+Ein Projekt besteht nur aus wenigen Dateien:
 
 ```text
 my-presentation/
-├── images/        images for the slides
-├── index.html     loads reveal.js and reads slides.md (copy once)
-├── slides.md      your slides (the only file you edit)
+├── images/        Bilder für die Folien
+├── index.html     lädt reveal.js und liest slides.md (einmal kopieren)
+├── slides.md      deine Folien (die einzige Datei, die du bearbeitest)
 ├── package.json
 └── .gitignore
 ```
 
-1. Create the folder and install the packages:
+1. Erstelle den Ordner und installiere die Pakete:
 
    ```bash
    mkdir my-presentation
@@ -49,11 +49,11 @@ my-presentation/
    mkdir images
    ```
 
-   `reveal.js` is the presentation software. `browser-sync` is a small web server that reloads the browser whenever you save.
+   `reveal.js` ist die Präsentationssoftware. `browser-sync` ist ein kleiner Webserver, der den Browser bei jedem Speichern neu lädt.
 
-2. Copy [index.html](./index.html) from this folder into your project.
+2. Kopiere [index.html](./index.html) aus diesem Ordner in dein Projekt.
 
-3. In `package.json`, replace the `"scripts"` block with:
+3. Ersetze in `package.json` den `"scripts"`-Block durch:
 
    ```json
    "scripts": {
@@ -61,49 +61,49 @@ my-presentation/
    }
    ```
 
-4. Create a `.gitignore` file so the installed packages don't end up in the repository:
+4. Erstelle eine `.gitignore`-Datei, damit die installierten Pakete nicht im Repository landen:
 
    ```text
    node_modules/
    ```
 
-Anyone who clones your repository runs `npm install` and `npm start`.
+Wer dein Repository klont, führt `npm install` und `npm start` aus.
 
-## 4. Your first slide
+## 4. Deine erste Folie
 
-Create `slides.md`:
+Erstelle `slides.md`:
 
 ```markdown
-# Our Project
+# Unser Projekt
 
 Anna Huber, Ben Koller
 
 ---
 
-## Current situation
+## Aktuelle Situation
 
-- The school tracks loan devices in Excel
-- Nobody knows who has which laptop
+- Die Schule verwaltet Leihgeräte in Excel
+- Niemand weiß, wer welchen Laptop hat
 
 ---
 
-## Goal
+## Ziel
 
-A web app that records every loan.
+Eine Web-App, die jede Ausleihe erfasst.
 ```
 
-A line with `---` starts a new slide. It needs an empty line before and after it.
+Eine Zeile mit `---` beginnt eine neue Folie. Davor und danach muss jeweils eine Leerzeile stehen.
 
-Start with `npm start` and move through the slides with the arrow keys.
+Starte die Präsentation mit `npm start` und wechsle mit den Pfeiltasten zwischen den Folien.
 
-## 5. Building blocks for slides
+## 5. Bausteine für Folien
 
-### Vertical slides
+### Vertikale Folien
 
-A line with `--` creates a sub-slide. You reach it with the down arrow. Useful for details you can skip when time is short.
+Eine Zeile mit `--` erstellt eine Unterfolie. Du erreichst sie mit der Pfeiltaste nach unten. Das ist nützlich für Details, die du bei Zeitmangel überspringen kannst.
 
 ```markdown
-## Architecture
+## Architektur
 
 --
 
@@ -118,18 +118,18 @@ Angular
 Quarkus
 ```
 
-### Reveal bullet points one by one
+### Aufzählungspunkte nacheinander einblenden
 
-Add a comment after each bullet point that turns it into a "fragment":
+Füge nach jedem Aufzählungspunkt einen Kommentar ein, der ihn zu einem „Fragment“ macht:
 
 ```markdown
-- first this <!-- .element: class="fragment" -->
-- then this <!-- .element: class="fragment" -->
+- zuerst das <!-- .element: class="fragment" -->
+- dann das <!-- .element: class="fragment" -->
 ```
 
-### Code with highlighted lines
+### Code mit hervorgehobenen Zeilen
 
-After the language, put the lines to highlight in square brackets: `[3]` for one line, `[2-4]` for a range.
+Gib nach der Sprache in eckigen Klammern die hervorzuhebenden Zeilen an: `[3]` für eine Zeile, `[2-4]` für einen Bereich.
 
 ````markdown
 ```java [3]
@@ -141,28 +141,28 @@ public class HelloWorld {
 ```
 ````
 
-Separated by `|`, the lines are highlighted one after another, the next one each time you move forward: `[1|2|3]`.
+Mit `|` getrennt werden die Zeilen nacheinander hervorgehoben – bei jedem Weiterblättern die nächste: `[1|2|3]`.
 
-### Images
+### Bilder
 
-Images go into the `images` folder.
+Bilder gehören in den Ordner `images`.
 
 ```markdown
-![Architecture](images/architecture.png)
+![Architektur](images/architecture.png)
 ```
 
-If the image is too large, set its height (`60vh` = 60 % of the screen height):
+Wenn das Bild zu groß ist, lege seine Höhe fest (`60vh` = 60 % der Bildschirmhöhe):
 
 ```markdown
-![Architecture](images/architecture.png) <!-- .element: style="height: 60vh" -->
+![Architektur](images/architecture.png) <!-- .element: style="height: 60vh" -->
 ```
 
-### Two columns
+### Zwei Spalten
 
-Markdown has no columns. For that, `index.html` defines the class `columns`. The empty lines around the Markdown content matter, otherwise it isn't converted.
+Markdown unterstützt keine Spalten. Dafür definiert `index.html` die Klasse `columns`. Die Leerzeilen um den Markdown-Inhalt sind wichtig, sonst wird er nicht umgewandelt.
 
 ```markdown
-## Before and after
+## Vorher und nachher
 
 <div class="columns">
 <div>
@@ -172,108 +172,108 @@ Markdown has no columns. For that, `index.html` defines the class `columns`. The
 </div>
 <div>
 
-- Excel list
-- no history
+- Excel-Liste
+- kein Verlauf
 
 </div>
 </div>
 ```
 
-### Tables
+### Tabellen
 
 ```markdown
-| Role | Person |
+| Rolle | Person |
 | --- | --- |
-| Product Owner | Anna |
+| Produktverantwortliche Person | Anna |
 | Scrum Master | Ben |
 ```
 
-### Speaker notes
+### Notizen für Vortragende
 
-Only the presenter sees the notes. Everything after a line `Note:` up to the end of the slide is a note. Press `S` to open the speaker view in its own window: current slide, next slide, notes and a clock.
+Nur die vortragende Person sieht die Notizen. Alles nach einer Zeile `Note:` bis zum Ende der Folie ist eine Notiz. Drücke `S`, um die Ansicht für Vortragende in einem eigenen Fenster zu öffnen: aktuelle Folie, nächste Folie, Notizen und eine Uhr.
 
 ```markdown
-## Goal
+## Ziel
 
-A web app that records every loan.
+Eine Web-App, die jede Ausleihe erfasst.
 
 Note:
-Tell the story about the lost laptop here.
+Erzähle hier die Geschichte vom verlorenen Laptop.
 ```
 
-### Background
+### Hintergrund
 
-A comment at the start of the slide:
+Ein Kommentar am Anfang der Folie:
 
 ```markdown
 <!-- .slide: data-background-color="#1e3a5f" -->
 
-## Thank you!
+## Danke!
 ```
 
-An image as the background of the whole slide:
+Ein Bild als Hintergrund der ganzen Folie:
 
 ```markdown
 <!-- .slide: data-background-image="images/title.jpg" -->
 
-## Welcome
+## Willkommen
 ```
 
-### Theme
+### Designvorlage
 
-You set the look in `index.html`, in the line with `theme/white.css`. Instead of `white` you can use `black`, `league`, `beige`, `night`, `serif`, `simple`, `solarized`, `moon`, `dracula`, `sky` or `blood`. On a projector in a bright room, `white` and `simple` are the easiest to read.
+Das Erscheinungsbild legst du in `index.html` in der Zeile mit `theme/white.css` fest. Statt `white` kannst du `black`, `league`, `beige`, `night`, `serif`, `simple`, `solarized`, `moon`, `dracula`, `sky` oder `blood` verwenden. Auf einem Beamer in einem hellen Raum sind `white` und `simple` am besten lesbar.
 
-## 6. Presenting
+## 6. Präsentieren
 
-| Key | Effect |
+| Taste | Funktion |
 | --- | --- |
-| Arrow keys, space | move through slides |
-| `F` | full screen |
-| `S` | speaker view with notes |
-| `O` or `Esc` | overview of all slides |
-| `B` or `.` | black screen |
-| `Alt` + click | zoom into an area |
+| Pfeiltasten, Leertaste | zwischen Folien wechseln |
+| `F` | Vollbild |
+| `S` | Ansicht für Vortragende mit Notizen |
+| `O` oder `Esc` | Übersicht aller Folien |
+| `B` oder `.` | schwarzer Bildschirm |
+| `Alt` + Klick | Bereich vergrößern |
 
-## 7. Save as PDF
+## 7. Als PDF speichern
 
-1. Open the presentation with `npm start`.
-2. Add `?print-pdf` to the address: `http://localhost:8000/?print-pdf`
-3. Print in **Chrome or Edge** (`Ctrl + P`): destination "Save as PDF", layout landscape, margins "None", background graphics on.
+1. Öffne die Präsentation mit `npm start`.
+2. Ergänze die Adresse um `?print-pdf`: `http://localhost:8000/?print-pdf`
+3. Drucke in **Chrome oder Edge** (`Ctrl + P`): Ziel „Als PDF speichern“, Querformat, Ränder „Keine“, Hintergrundgrafiken aktivieren.
 
-## 8. Publish online (GitHub Pages)
+## 8. Online veröffentlichen (GitHub Pages)
 
-`index.html` loads reveal.js from `node_modules`, which is not part of the repository. For the online version you therefore load reveal.js from the internet (CDN): in `index.html`, replace every
+`index.html` lädt reveal.js aus `node_modules`, das nicht Teil des Repositorys ist. Für die Online-Version lädst du reveal.js daher aus dem Internet (CDN): Ersetze in `index.html` jedes Vorkommen von
 
 ```text
 node_modules/reveal.js/
 ```
 
-with
+durch
 
 ```text
 https://cdn.jsdelivr.net/npm/reveal.js@6.0.2/
 ```
 
-Then publish `index.html`, `slides.md` and the `images` folder. In the repository, choose the branch under *Settings → Pages*.
+Veröffentliche anschließend `index.html`, `slides.md` und den Ordner `images`. Wähle im Repository unter *Settings → Pages* den Branch aus.
 
-## 9. Troubleshooting
+## 9. Fehlerbehebung
 
-| Problem | Cause and fix |
+| Problem | Ursache und Lösung |
 | --- | --- |
-| The page stays white | You opened `index.html` by double-clicking. The browser then isn't allowed to load `slides.md`. Always open it with `npm start`. |
-| Everything is one single slide | The empty line before or after `---` is missing. |
-| Text shows up as `<!-- .element ... -->` | The comment has to be on the same line as the bullet point. |
-| The columns show `![Image](...)` instead of the image | The empty lines before and after the Markdown content inside the `<div>` are missing. |
-| Image is missing | The file isn't in `images` or the name is misspelled (upper/lower case matters online). |
-| Text runs off the bottom of the slide | Too much content: split it over two slides or add a vertical slide. |
-| Port 8000 is in use | Enter a different number after `--port` in `package.json`. |
+| Die Seite bleibt weiß | Du hast `index.html` per Doppelklick geöffnet. Dann darf der Browser `slides.md` nicht laden. Öffne die Präsentation immer mit `npm start`. |
+| Alles erscheint auf einer einzigen Folie | Die Leerzeile vor oder nach `---` fehlt. |
+| Der Text `<!-- .element ... -->` wird angezeigt | Der Kommentar muss in derselben Zeile wie der Aufzählungspunkt stehen. |
+| In den Spalten steht `![Image](...)` statt des Bildes | Im `<div>` fehlen die Leerzeilen vor oder nach dem Markdown-Inhalt. |
+| Ein Bild fehlt | Die Datei liegt nicht in `images` oder der Name ist falsch geschrieben (online wird zwischen Groß- und Kleinschreibung unterschieden). |
+| Text ragt unten aus der Folie heraus | Zu viel Inhalt: Teile ihn auf zwei Folien auf oder füge eine vertikale Folie hinzu. |
+| Port 8000 ist belegt | Gib in `package.json` nach `--port` eine andere Nummer ein. |
 
-## 10. Further reading
+## 10. Weiterlesen
 
 - Markdown in reveal.js: https://revealjs.com/markdown/
-- Everything about reveal.js (transitions, animations, layouts): https://revealjs.com/
-- Markdown basics: https://www.markdownguide.org/basic-syntax/
+- Alles über reveal.js (Übergänge, Animationen, Layouts): https://revealjs.com/
+- Markdown-Grundlagen: https://www.markdownguide.org/basic-syntax/
 
-## 11. Tip: Quarto
+## 11. Tipp: Quarto
 
-If you want more, have a look at [Quarto](https://quarto.org/docs/presentations/revealjs/). You also write Markdown there, and Quarto builds a reveal.js presentation from it. Columns, callout boxes, diagrams and code from real files are built in, without HTML. In return you have to install Quarto, and there is an extra build step. If you like, the same file can also produce PowerPoint or PDF slides.
+Wenn du mehr möchtest, sieh dir [Quarto](https://quarto.org/docs/presentations/revealjs/) an. Auch dort schreibst du Markdown, aus dem Quarto eine reveal.js-Präsentation erstellt. Spalten, Hinweisboxen, Diagramme und Code aus echten Dateien sind ohne HTML bereits integriert. Dafür musst du Quarto installieren und einen zusätzlichen Build-Schritt ausführen. Bei Bedarf kannst du aus derselben Datei auch PowerPoint- oder PDF-Folien erstellen.
